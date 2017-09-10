@@ -1,0 +1,20 @@
+# Registers
+
+eip:    Stores address of next instruction to be executed
+esp:    Stores address of top of stack
+ebp:    Stores base pointer for current method
+
+# Technique
+
+Replace the stack's contents of the return address (previous ebp)
+
+# Addresses
+
+sym.stealth:        0x0804857b
+sym.transcheck:     0x0804858e
+
+sym.main
+    - Return address from transcheck:   0x080487e9
+        - EBP at:       0xffde3c1c
+        - Word#1 at:    0xffde3ca8
+        - Word#2 at:    
